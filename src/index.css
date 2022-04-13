@@ -1,0 +1,169 @@
+:root{
+  --background: hsl(225, 21%, 49%);
+  --main-background: hsl(223, 31%, 20%);
+  --btn-background: hsl(222,26%, 31%);
+  --key-background: hsl(224, 44%, 10%);
+  --red:hsl(6, 63%, 50%);
+  --dark-red: hsl(6, 70%, 34%);
+  --orange: hsl(30,25%,89%);
+  --dark-orange:hsl(28, 16%, 65%);
+  --grayish-blue:hsl(221, 14%, 31%);
+  --white: #fff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif ;
+  background-color: var(--main-background);
+}
+
+button{
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+.App{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  min-width: 350px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--white);
+}
+
+.theme{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.theme p{
+  margin-right: 10px;
+}
+
+.toggler{
+  display: flex;
+  background-color: var(--key-background);
+  border-radius: 5px;
+}
+
+.toggle{
+  position: relative;
+}
+
+.toggle span{
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toggle-1{
+  accent-color: rgb(193, 10, 10);
+}
+
+.toggle-3, .toggle-2{
+  visibility: hidden;
+}
+
+.display{
+  background-color: var(--key-background);
+  color: var(--white);
+  width: 100%;
+  text-align: end;
+  border-radius: 5px;
+  
+}
+.display h1{
+  padding: 12px;
+}
+
+.operators{
+  background-color: var(--key-background);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+
+.first{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 10px;
+}
+
+.first button{
+  font-size: 18px;
+  background-color: var(--orange);
+  border-radius: 7px;
+  box-shadow: 0px 3px var(--dark-orange);
+  
+}
+
+.second{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.second button{
+  flex: 1 1 0%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: var(--orange);
+  border-radius: 7px;
+}
+
+
+.second button:first-child{
+  background-color: var(--background);
+  box-shadow: 0px 3px  var(--grayish-blue);
+}
+
+.second button:not(:first-child){
+  box-shadow: 0px 3px var(--dark-orange);
+}
+
+.bottom{
+  gap: 10px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.bottom button{
+  border-radius: 7px;
+  flex: 1 1 0%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.bottom button:first-child{
+  background-color: var(--background);
+  box-shadow: 0px 3px var(--grayish-blue);
+}
+
+.bottom button:last-child{
+  background-color: var(--red);
+  box-shadow: 0px 3px var(--dark-red);
+}
